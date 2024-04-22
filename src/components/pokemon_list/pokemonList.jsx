@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Pokemon from "../pokemon/pokemon"
+import "./pokemonList.css"
 function pokemonList(){
 
     const [pokemonList,setPokemonList] = useState([]);
@@ -29,13 +30,13 @@ function pokemonList(){
     },[]);
 
     return(
-        <div>
+        <div >
             {(isLoading) ? "Loading....":
-                <div>{pokemonList.map((p) =>
-                       <>
+                <div className="parent">{pokemonList.map((p) =>
+                       <div className="subParent">
                            <Pokemon name = {p.name} weight={p.weight} />
                            <img src={p.sprites} alt="" /> 
-                       </>
+                       </div>
                     
                 
                 )}

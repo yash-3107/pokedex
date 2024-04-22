@@ -1,8 +1,6 @@
-.main_design{
+.box{
     display: flex;
     flex-direction: column;
-    letter-spacing: 5px;
+    justify-content: center;
     align-items: center;
-  
-    width:100%;
 }
