@@ -1,15 +1,41 @@
 .parent{
     width:100%;
     display: flex;
-    
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    ;
+    align-items: space-between;
 
 
 }
 .subParent{
+    
     display: flex;
+    flex-basis: 30%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+img{
+    height:200px;
+    width:200px;
+}
+.controls{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+button{
+    padding:10px;
+    margin:5px;
+    background-color: black;
+    color: red;
+    width:12rem;
+
+}
+button:hover{
+    background-color: rgb(112, 115, 117);
+    color: black;
+    border: none;
 }
