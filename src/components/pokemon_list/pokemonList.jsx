@@ -16,9 +16,7 @@ function pokemonList(){
     async function downloadPokemon(){
         //to fetch the download list
         const response = await axios.get(pokeURL);
-        console.log(response.data.results);
-        console.log(response.data);
-
+        
         //obtaining the results array--an array of objects
         const pkResults = response.data.results;
 
@@ -37,10 +35,10 @@ function pokemonList(){
                 sprites:(pokeData.sprites.other)? pokeData.sprites.other.dream_world.front_default : pokeData.sprites.front_shiny
         }
         })
-        console.log(results);
+        
         setPokemonList(results);
         setLoading(false);
-        setPrev(response.data.prev);
+        setPrev(response.data.previous);
         setNext(response.data.next);
     }
     useEffect(()=>{
