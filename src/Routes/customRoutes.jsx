@@ -5,12 +5,9 @@ import PokemonList from "../components/pokemon_list/pokemonList.jsx"
 function CustomRoutes(){
          return(
          <Routes>
-            <Route path="/" element={<>
-                  <Pokedex />
-                  <PokemonList />
-                                   </>}>
-            </Route>
+            <Route path="/" element={<Pokedex/>}></Route>
             <Route path="/pokemon/:id" element={<PokemonDetails />}></Route>
+            <Route path="/pokemon/:pokemonName" element={<PokemonDetails/>}></Route>
          </Routes>
          )
 }
